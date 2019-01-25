@@ -1,0 +1,40 @@
+.add{
+  display: block;
+  padding: 14px 16px;
+  background-color: #333;
+  color: white;
+  font-weight: bold;;
+  width: 165px;
+  text-decoration: none;
+}
+
+a.add:hover{
+  background-color: #000;
+}
+
+
+.vomosu{
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+button{
+  background-color: #DC143C;
+  padding: 12px 16px;
+  color: white;
+  border: 0px;
+}
+
+a.vomosu:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+p{
+  font-size: 2.2em;
+}

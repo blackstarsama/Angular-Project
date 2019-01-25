@@ -1,0 +1,57 @@
+
+<div class="project-details" *ngIf="project">
+
+  <h4 class="mb-5">Profil de {{project.title}}</h4>
+
+      <div class="row">
+
+          <div class="col-xs-12 col-md-2">
+              <strong>Nom</strong>
+          </div>
+          <div class="col-xs-12 col-md-10">
+              {{project.name|uppercase}}
+          </div>
+          <div class="col-xs-12 col-md-2">
+              <strong>Description</strong>
+          </div>
+          <div class="col-xs-12 col-md-10">
+              {{project.description}}
+          </div>
+          <div class="col-xs-12 col-md-2">
+              <strong>Date de début</strong>
+          </div>
+          <div class="col-xs-12 col-md-10">
+              {{project.startdate}}
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <strong>Date de fin</strong>
+        </div>
+        <div class="col-xs-12 col-md-10">
+            {{project.enddate}}
+        </div>
+        <div class="col-xs-12 col-md-2">
+          <strong>Client</strong>
+      </div>
+      <div class="col-xs-12 col-md-10">
+          {{project.customer}}
+      </div>
+      <div class="col-xs-12 col-md-2">
+        <strong>Montant</strong>
+    </div>
+    <div class="col-xs-12 col-md-10">
+        {{project.sum}}
+    </div>
+    <div class="col-xs-12 col-md-2">
+      <strong>Statut</strong>
+  </div>
+  <div class="col-xs-12 col-md-10">
+      {{project.status}}
+  </div>
+      </div>
+
+      <div class="mt-5">
+          <a routerLink="/updateproject/{{project._id}}" class="mod">Modifier ce projet</a>
+          <button type="button" name="button" (click)="deleteProject(project.id)">Supprimer ce projet</button>
+      </div>
+
+</div>

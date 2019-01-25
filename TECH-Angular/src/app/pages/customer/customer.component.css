@@ -1,0 +1,20 @@
+button{
+  background-color: #DC143C;
+  padding: 12px 16px;
+  color: white;
+  border: 0px;
+}
+
+.mod{
+  padding: 14px 16px;
+  background-color: #333;
+  color: white;
+  font-weight: bold;;
+  width: 160px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+a.mod:hover{
+  background-color: #000;
+}

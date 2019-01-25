@@ -1,0 +1,50 @@
+<h1>Liste des salariés</h1>
+
+<div class="counter" *ngIf="employees">
+    <p>Total salariés : {{employees.length}}</p>
+</div>
+
+<div class="mt-5 mb-5">
+    <a routerLink='/create' class="add">ajouter un salarié</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover table-bordered table-dark">
+
+    <tr>
+        <td>id</td>
+        <td>Nom</td>
+        <td>Prenom</td>
+        <td>Username</td>
+        <td>Date de naissance</td>
+        <td>Rue</td>
+        <td>Ville</td>
+        <td>Code Postal</td>
+        <td>Telephone</td>
+        <td>Email</td>
+        <td>Poste</td>
+    </tr>
+
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee._id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.firstname}}</td>
+            <td>{{employee.username}}</td>
+            <td>{{employee.birthday}}</td>
+            <td>{{employee.address}}</td>
+            <td>{{employee.city}}</td>
+            <td>{{employee.zipcode}}</td>
+            <td>{{employee.phone}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.post}}</td>
+            <td>
+                <a routerLink="/employee/{{employee._id}}" class="vomosu">Voir </a>
+                <a routerLink="/update/{{employee._id}}" class="vomosu">Modifier</a>
+                <button type="button" name="button" (click)="deleteEmployee(employee._id)">Supprimer</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+</div>

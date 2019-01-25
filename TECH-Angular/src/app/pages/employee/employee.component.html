@@ -1,0 +1,75 @@
+<div class="employee-details" *ngIf="employee">
+
+  <h4 class="mb-5">Profil de {{employee.title}}</h4>
+
+      <div class="row">
+
+          <div class="col-xs-12 col-md-2">
+              <strong>Nom</strong>
+          </div>
+          <div class="col-xs-12 col-md-10">
+              {{employee.name|uppercase}}
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <strong>Prenom</strong>
+        </div>
+        <div class="col-xs-12 col-md-10">
+            {{employee.firstname|uppercase}}
+        </div>
+          <div class="col-xs-12 col-md-2">
+              <strong>Username</strong>
+          </div>
+          <div class="col-xs-12 col-md-10">
+              {{employee.username}}
+          </div>
+          <div class="col-xs-12 col-md-2">
+              <strong>Date de naissance</strong>
+          </div>
+          <div class="col-xs-12 col-md-10">
+              {{employee.birthday}}
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <strong>Rue</strong>
+        </div>
+        <div class="col-xs-12 col-md-10">
+            {{employee.address}}
+        </div>
+        <div class="col-xs-12 col-md-2">
+          <strong>Ville</strong>
+      </div>
+      <div class="col-xs-12 col-md-10">
+          {{employee.city}}
+      </div>
+      <div class="col-xs-12 col-md-2">
+        <strong>Code Postal</strong>
+    </div>
+    <div class="col-xs-12 col-md-10">
+        {{employee.zipcode}}
+    </div>
+    <div class="col-xs-12 col-md-2">
+      <strong>Telephone</strong>
+  </div>
+  <div class="col-xs-12 col-md-10">
+      {{employee.phone}}
+  </div>
+  <div class="col-xs-12 col-md-2">
+    <strong>Email</strong>
+</div>
+<div class="col-xs-12 col-md-10">
+    {{employee.email}}
+</div>
+<div class="col-xs-12 col-md-2">
+  <strong>Poste</strong>
+</div>
+<div class="col-xs-12 col-md-10">
+  {{employee.post}}
+</div>
+
+      </div>
+
+      <div class="mt-5">
+          <a routerLink="/update/{{employee._id}}" class="mod">Modifier ce salarié</a>
+          <button type="button" name="button" (click)="deleteEmployee(employee.id)">Supprimer ce salarié</button>
+      </div>
+
+</div>

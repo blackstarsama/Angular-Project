@@ -1,0 +1,73 @@
+<!-- formulaire pour update -->
+<form *ngIf="customer">
+
+  <div class="row">
+
+      <div class="col">
+          <div class="form-group">
+              <label>Nom de l'entreprise</label>
+
+               <!-- ici, pour récupérer la valeur du nom dans le formaulaire, on utiliser [value], pour récupérer la modification, on utilise (onchange) -->
+              <input type="text" class="form-control" placeholder="Nom de l'entreprise" [value]="customer.nameent" (change)="formUpdate.nameent = $event.target.value">
+          </div>
+      </div>
+
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="form-group">
+              <label>Rue</label>
+              <input type="text" class="form-control" placeholder="Rue" [value]="customer.address" (change)="formUpdate.address = $event.target.value">
+          </div>
+      </div>
+      <div class="col">
+          <div class="form-group">
+              <label>Ville</label>
+              <input type="text" class="form-control" placeholder="Ville" [value]="customer.city" (change)="formUpdate.city = $event.target.value">
+          </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+            <label>Code Postal</label>
+            <input type="number" class="form-control" placeholder="Code Postal" [value]="customer.zipcode" (change)="formUpdate.zipcode = $event.target.value">
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+        <div class="form-group">
+            <label>Nom</label>
+            <input type="text" class="form-control" placeholder="Nom" [value]="customer.name" (change)="formUpdate.name = $event.target.value">
+        </div>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <label>Prenom</label>
+            <input type="text" class="form-control" placeholder="Prenom" [value]="customer.firstname" (change)="formUpdate.firstname = $event.target.value">
+        </div>
+    </div>
+    <div class="row">
+      <div class="col">
+          <div class="form-group">
+              <label>Telephone</label>
+              <input type="number" class="form-control" placeholder="Telephone" [value]="customer.phone" (change)="formUpdate.phone = $event.target.value">
+          </div>
+      </div>
+      <div class="col">
+          <div class="form-group">
+              <label>Email</label>
+              <input type="text" class="form-control" placeholder="Email" [value]="customer.email" (change)="formUpdate.email = $event.target.value">
+          </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+            <label>Secteur d'activité</label>
+            <input type="text" class="form-control" placeholder="Secteur d'activité" [value]="customer.activity" (change)="formUpdate.activity = $event.target.value">
+        </div>
+    </div>
+  </div>
+</div>
+ <!-- bouton de modificaton, sur l'event click, on appel la fonction updateUser qui a comme argument, le userid -->
+  <button type="button" name="button" class="btn btn-info" (click)=updateCustomer(customer.id)>modifier</button>
+
+</form>

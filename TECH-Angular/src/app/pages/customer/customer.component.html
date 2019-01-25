@@ -1,0 +1,71 @@
+
+<div class="customer-details" *ngIf="customer">
+
+  <h4 class="mb-5">Profil de {{customer.title}}</h4>
+
+      <div class="row">
+
+          <div class="col-xs-12 col-md-2">
+              <strong>Nom de l'netreprise</strong>
+          </div>
+          <div class="col-xs-12 col-md-10">
+              {{customer.nameent|uppercase}}
+          </div>
+          <div class="col-xs-12 col-md-2">
+              <strong>Rue</strong>
+          </div>
+          <div class="col-xs-12 col-md-10">
+              {{customer.address}}
+          </div>
+          <div class="col-xs-12 col-md-2">
+              <strong>Ville</strong>
+          </div>
+          <div class="col-xs-12 col-md-10">
+              {{customer.city}}
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <strong>Code Postal</strong>
+        </div>
+        <div class="col-xs-12 col-md-10">
+            {{customer.zipcode}}
+        </div>
+        <div class="col-xs-12 col-md-2">
+          <strong>Nom</strong>
+      </div>
+      <div class="col-xs-12 col-md-10">
+          {{customer.name|uppercase}}
+      </div>
+      <div class="col-xs-12 col-md-2">
+        <strong>Prenom</strong>
+    </div>
+    <div class="col-xs-12 col-md-10">
+        {{customer.firstname}}
+    </div>
+    <div class="col-xs-12 col-md-2">
+      <strong>Telephone</strong>
+  </div>
+  <div class="col-xs-12 col-md-10">
+      {{customer.phone}}
+  </div>
+  <div class="col-xs-12 col-md-2">
+    <strong>Email</strong>
+</div>
+<div class="col-xs-12 col-md-10">
+    {{customer.email}}
+</div>
+<div class="col-xs-12 col-md-2">
+  <strong>Secteur d'activité</strong>
+</div>
+<div class="col-xs-12 col-md-10">
+  {{customer.activity}}
+</div>
+
+    </div>
+
+
+      <div class="mt-5">
+          <a routerLink="/updatecustomer/{{customer._id}}" class="mod">Modifier ce client</a>
+          <button type="button" name="button" (click)="deleteCustomer(customer.id)">Supprimer ce client</button>
+      </div>
+
+</div>
