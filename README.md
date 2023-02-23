@@ -4,11 +4,6 @@
 
 This project was generated with Angular CLI version 6.2.5, NodeJs and Express .
 
-## Development server
-
-Run `ng serve` for a dev server.
-Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
 ## Built With
 
 Academic project putting into practice the concepts of Angular, Nodejs and Express
@@ -20,6 +15,18 @@ This project was built using these technologies.
 - CSS3
 - VsCode
 - Vercel
+
+## Features
+
+**📖 Multi-Page Layout**
+
+**📱 Fully Responsive**
+
+## 🛠 Development server
+
+1. Installation `npm install`
+2. In the project directory, you can run: `ng serve` for a dev server.
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
