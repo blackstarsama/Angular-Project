@@ -9,6 +9,18 @@ This project was generated with Angular CLI version 6.2.5, NodeJs and Express .
 Run `ng serve` for a dev server.
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Built With
+
+Academic project putting into practice the concepts of Angular, Nodejs and Express
+
+This project was built using these technologies.
+
+- Node.js
+- Express.js
+- CSS3
+- VsCode
+- Vercel
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
